@@ -9818,7 +9818,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
 
 .dsn-slider .footer-slid .social-btn,
 .dsn-slider .footer-slid a.cop-icon {
-    width: 24px;
+    width: 20px;
     height: 12px;
     cursor: pointer;
 }
@@ -10035,7 +10035,7 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
     display: inline-block;
     line-height: 30px;
     margin-right: 30px;
-    font-size: 21px;
+    font-size: 19px;
 }
 
 .dsn-slider .footer-slid .main-social .social-network li:last-child {
@@ -13181,7 +13181,7 @@ certificates
 }
 
 .btn {
-    padding: 6px 10px;
+    padding: 4px 6px;
     display: inline-flex;
     background: #202020;
     color: #fff;

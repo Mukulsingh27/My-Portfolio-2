@@ -7345,13 +7345,14 @@ body.nav-active .dsn-nav-bar .icon-m .menu-icon__line {
     transition: 1.2s cubic-bezier(0.645, 0, 0.355, 1);
 }
 
-.our-team .team-item:hover .box-img img {
+
+/* .our-team .team-item:hover .box-img img {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
     -webkit-filter: blur(3px);
     filter: blur(3px);
-}
+} */
 
 .our-team .team-item:hover .box-content h4 {
     -webkit-transform: translateX(20px);

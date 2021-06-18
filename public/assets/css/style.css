@@ -12946,3 +12946,22 @@ certificates
 .buttons .btn:nth-child(3) {
     font-size: 2em;
 }
+
+
+/* background music */
+
+.right-music-btn {
+    float: right;
+    right: 5px;
+    margin-right: 0;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    position: fixed;
+}
+
+#music-icon {
+    width: 60px;
+    cursor: pointer;
+}

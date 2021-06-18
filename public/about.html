@@ -58,6 +58,14 @@
         </div>
     </div>
 
+    <div class="right-music-btn">
+        <img src="assets/img/project/play.png" alt="" id="music-icon">
+    </div>
+
+    <audio id="mySong">
+        <source src="assets/img/project/higherNCS.mp3" type="audio/mp3">
+    </audio>
+
     <!-- Nav Bar -->
     <div class="dsn-nav-bar">
         <div class="site-header">
@@ -591,6 +599,22 @@
         document.addEventListener("contextmenu ", function(mukul) {
             mukul.preventDefault();
         });
+    </script>
+
+    <!--background music-->
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("music-icon");
+
+        icon.onclick = function() {
+            if (mySong.paused) {
+                mySong.play();
+                icon.src = "assets/img/project/pause.png";
+            } else {
+                mySong.pause();
+                icon.src = "assets/img/project/play.png";
+            }
+        }
     </script>
 </body>
 

@@ -164,10 +164,11 @@
 
     <main class="main-root">
         <div id="dsn-scrollbar">
-            <header>
+            <header style="background: #202020;">
                 <div class="headefr-fexid" data-dsn-header="project">
                     <div class="bg" id="dsn-hero-parallax-img" data-dsn-ajax="img">
-                        <div class="bg-image cover-bg" data-overlay="2" data-image-src="assets/img/blackbb.png"></div>
+                        <div class="bg-image cover-bg block-animation" data-overlay="2" data-image-src="" style="margin-left:35%; background:#202020"></div>
+                        <!-- <div class="block-animation"></div> -->
                     </div>
 
                     <div class="scroll" data-dsn-animate="ajax">
@@ -176,23 +177,25 @@
                     </div>
                     <div class="project-title" id="dsn-hero-parallax-title">
                         <div class="title-text-header">
-                            <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; margin-bottom:70px; color:#fff">&lt;html&gt;</span>
+                            <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; margin-bottom:70px; color:rgb(255, 255, 255);text-shadow: 0px 0px 10px #0cbfe9, 0px 0px 20px #0cbfe9;">&lt;html&gt;</span>
                             <div class="">
-                                <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:#fff">&lt;h1&gt;</span>
+                                <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:rgb(255, 255, 255);text-shadow: 0px 0px 10px #0cbfe9, 0px 0px 20px #0cbfe9;">&lt;h1&gt;</span>
                             </div>
                             <span class="title-text-header-inner">
                                 <span data-dsn-animate="ajax" style="text-shadow: 0px 0px 10px #0cbfe9, 0px 0px 20px #0cbfe9;">E - certificates</span>
                             </span>
-                            <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:#fff">&lt;/h1&gt;</span>
+                            <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:rgb(255, 255, 255);text-shadow: 0px 0px 10px #0cbfe9, 0px 0px 20px #0cbfe9;">&lt;/h1&gt;</span>
                         </div>
 
                         <div class="sub-text-header" data-dsn-animate="ajax">
-                            <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:#fff">&lt;p&gt;</span>
+                            <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:rgb(255, 255, 255);text-shadow: 0px 0px 10px #0cbfe9, 0px 0px 20px #0cbfe9;">&lt;p&gt;</span>
                             <h5>UPES</h5>
                             <span>- 2018 - 2022</span>
-                            <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:#fff">&lt;/p&gt;</span>
+                            <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:rgb(255, 255, 255);text-shadow: 0px 0px 10px #0cbfe9, 0px 0px 20px #0cbfe9;">&lt;/p&gt;</span>
+                            <br><br><br>
+                            <button style="position: relative; z-index:1;cursor:pointer;" onclick="generate()">Rearrange</button>
                             <br><br><br><br><br><br>
-                            <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:#fff">&lt;body&gt;</span>
+                            <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:rgb(255, 255, 255);text-shadow: 0px 0px 10px #0cbfe9, 0px 0px 20px #0cbfe9;">&lt;body&gt;</span>
                         </div>
                     </div>
 
@@ -480,6 +483,7 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/dsn-grid.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/anime.min.js"></script>
 
     <script type="text/javascript">
         document.addEventListener("contextmenu", function(mukul) {
@@ -524,6 +528,33 @@
                     });
             }
         })
+    </script>
+
+    <!--block animation-->
+    <script>
+        const container = document.querySelector('.block-animation');
+        for (var i = 0; i <= 100; i++) {
+            const blocks = document.createElement('div')
+            blocks.classList.add('random-blocks');
+            container.appendChild(blocks);
+        }
+
+        function generate() {
+            anime({
+                targets: '.random-blocks',
+                translateX: function() {
+                    return anime.random(-700, 700)
+                },
+                translateY: function() {
+                    return anime.random(-700, 700)
+                },
+                scale: function() {
+                    return anime.random(1, 5)
+                }
+            })
+        }
+
+        generate()
     </script>
 </body>
 

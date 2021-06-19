@@ -13147,3 +13147,22 @@ certificates
     animation-delay: 2.75s;
     animation-duration: 2.25s;
 }
+
+
+/* block animation */
+
+.random-blocks {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.945);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.random-blocks:nth-child(3n + 2) {
+    background: rgba(53, 53, 53, 0.89);
+}
+
+.random-blocks:nth-child(3n + 3) {
+    background: #ff9113fb;
+}

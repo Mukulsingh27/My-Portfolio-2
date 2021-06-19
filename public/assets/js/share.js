@@ -18,7 +18,7 @@ function setShareLinks() {
 
 
     $(".social-share-url.facebook").on("click", function() {
-        url = "https://www.facebook.com/sharer.php?u=mukulsingh.ml";
+        url = "https://www.facebook.com/sharer.php?u=hellomukul.tk";
         socialWindowScreen(url);
     })
     $(".social-share-url.twitter").on("click", function() {

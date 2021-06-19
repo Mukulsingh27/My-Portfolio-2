@@ -12966,6 +12966,25 @@ certificates
     cursor: pointer;
 }
 
+.right-share-btn {
+    float: right;
+    right: 12px;
+    margin-right: 0;
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+    position: fixed;
+    border: none;
+}
+
+#share-float-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 
 /* shooting star bg */
 
@@ -13005,7 +13024,33 @@ certificates
     transform: translateY(-50%);
     width: 300px;
     height: 1px;
-    animation: animateStar 3s linear infinite;
+    animation: animateStar 18s linear infinite;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+.shooting-star-2::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    letter-spacing: 50px;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    animation: animateStar 11s linear infinite;
+    background: linear-gradient(90deg, #fff, transparent);
+}
+
+.shooting-star-3::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    letter-spacing: 50px;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    animation: animateStar 7s linear infinite;
     background: linear-gradient(90deg, #fff, transparent);
 }
 

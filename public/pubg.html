@@ -11,6 +11,7 @@
     <!--  Title -->
     <title>Mukul - Portfolio (Pubg)</title>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Font Google -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&amp;display=swap" rel="stylesheet">
@@ -58,6 +59,10 @@
 
     <div class="right-music-btn">
         <img src="assets/img/project/play.png" alt="" id="music-icon">
+    </div>
+
+    <div class="right-share-btn">
+        <img src="assets/img/share1.png" alt="" id="share-float-icon">
     </div>
 
     <audio id="mySong">
@@ -533,6 +538,29 @@
                 icon.src = "assets/img/project/play.png";
             }
         }
+    </script>
+
+    <!--web share api-->
+    <script>
+        const button = document.getElementById('share-float-icon');
+        button.addEventListener('click', m => {
+            m.preventDefault();
+            if (navigator.share) {
+                const shareData = {
+                    title: "Mukul's Portfolio",
+                    text: ' Thank you for sharing ',
+                    url: window.location.href,
+                };
+                navigator.share(shareData)
+                    .then(() => {
+                        swal("Shared Successfully !", "Thank you for sharing", "success");
+                    })
+                    .catch(m => {
+                        //alert(e)
+                        swal("oops !", e, "error");
+                    });
+            }
+        })
     </script>
 </body>
 

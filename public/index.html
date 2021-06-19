@@ -12,6 +12,9 @@
     <!--  Title -->
     <title>Mukul - Portfolio (Main)</title>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+
     <!-- Font Google -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&amp;display=swap" rel="stylesheet">
@@ -59,6 +62,9 @@
 
     <div class="right-music-btn">
         <img src="assets/img/project/play.png" alt="" id="music-icon">
+    </div>
+    <div class="right-share-btn">
+        <img src="assets/img/share1.png" alt="" id="share-float-icon">
     </div>
 
     <audio id="mySong">
@@ -207,6 +213,28 @@
                                         <span class="shooting-star-1"></span>
                                         <span class="shooting-star-1"></span>
                                         <span class="shooting-star-1"></span>
+                                        <br>
+                                        <span class="shooting-star-2"></span>
+                                        <span class="shooting-star-2"></span>
+                                        <span class="shooting-star-2"></span>
+                                        <span class="shooting-star-2"></span>
+                                        <span class="shooting-star-2"></span>
+                                        <span class="shooting-star-2"></span>
+                                        <span class="shooting-star-2"></span>
+                                        <span class="shooting-star-2"></span>
+                                        <span class="shooting-star-2"></span>
+                                        <span class="shooting-star-2"></span>
+                                        <br>
+                                        <span class="shooting-star-3"></span>
+                                        <span class="shooting-star-3"></span>
+                                        <span class="shooting-star-3"></span>
+                                        <span class="shooting-star-3"></span>
+                                        <span class="shooting-star-3"></span>
+                                        <span class="shooting-star-3"></span>
+                                        <span class="shooting-star-3"></span>
+                                        <span class="shooting-star-3"></span>
+                                        <span class="shooting-star-3"></span>
+                                        <span class="shooting-star-3"></span>
                                     </div>
                                 </div>
                             </div>
@@ -317,6 +345,7 @@
                                         <a class="image-zoom effect-ajax " href="about.html " data-dsn="parallax ">
                                             <span>About Me</span>
                                         </a>
+                                        <button class="sweet-alert-test"> click me </button>
                                     </div>
                                     <span style="font-family: 'Nothing You Could Do', cursive; text-transform: lowercase; font-size:22px; color:rgb(36, 36, 36)">&lt;/section&gt;</span>
                                 </div>
@@ -804,7 +833,10 @@
     <script>
         let percentage = document.querySelector('.percentage');
         navigator.getBattery().then(function(battery) {
-            percentage.innerHTML = battery.level * 100 + '%';
+            percentage.innerHTML = battery.level * 100 + '%'
+            if ((battery.level * 100) < 20) {
+                swal("Battery about to die !", "you must charge your device", "warning");
+            }
         })
     </script>
 
@@ -821,21 +853,45 @@
     </script>
 
     <script>
-        const button = document.getElementById('web-share-btn');
+        const button = document.getElementById('share-float-icon');
         button.addEventListener('click', e => {
             e.preventDefault();
             if (navigator.share) {
                 const shareData = {
                     title: "Mukul's Portfolio",
                     text: ' Thank you for sharing ',
-                    url: 'http://mukulsingh.ml',
+                    url: 'https://hellomukul.tk/',
                 };
                 navigator.share(shareData)
                     .then(() => {
-                        alert('Shared Successfully !')
+                        swal("Shared Successfully !", "Thank you for sharing", "success");
                     })
                     .catch(e => {
-                        alert(e)
+                        //alert(e)
+                        swal("oops !", e, "error");
+                    });
+            }
+        })
+    </script>
+
+    <!--web share api-->
+    <script>
+        const button = document.getElementById('web-share-btn');
+        button.addEventListener('click', m => {
+            m.preventDefault();
+            if (navigator.share) {
+                const shareData = {
+                    title: "Mukul's Portfolio",
+                    text: ' Thank you for sharing ',
+                    url: window.location.href,
+                };
+                navigator.share(shareData)
+                    .then(() => {
+                        swal("Shared Successfully !", "Thank you for sharing", "success");
+                    })
+                    .catch(m => {
+                        //alert(e)
+                        swal("oops !", e, "error");
                     });
             }
         })
@@ -863,6 +919,15 @@
             }
         }
     </script>
+
+    <script>
+        document.querySelector('.sweet-alert-test').addEventListener('click', success);
+
+        function success() {
+            swal(" XOXO ", "< do provide feedback />", "info");
+        }
+    </script>
+
 </body>
 
 </html>

@@ -13,14 +13,14 @@ window.onload = () => {
             if (xhr.status == 200 && xhr.status < 300) {
                 toast.classList.remove("offline");
                 title.innerText = "You're online now :)";
-                subTitle.innerText = "XOXO! Internet is Connected.";
+                subTitle.innerText = "Cheers! Internet is Connected.";
                 wifiIcon.innerHTML = '<i class="uil uil-wifi"></i>';
                 closeIcon.onclick = () => {
                     wrapper.classList.add("hide");
                 }
                 setTimeout(() => {
                     wrapper.classList.add("hide");
-                }, 3000);
+                }, 800);
             } else {
                 offline();
             }

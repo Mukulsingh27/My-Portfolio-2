@@ -26,6 +26,7 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -63,13 +64,50 @@
     <div class="right-music-btn">
         <img src="assets/img/project/play.png" alt="" id="music-icon">
     </div>
+
     <div class="right-share-btn">
-        <img src="assets/img/share1.png" alt="" id="share-float-icon">
+        <img src="assets/img/share1.png" alt="" class="view-modal">
     </div>
 
     <audio id="mySong">
         <source src="assets/img/project/higherNCS.mp3" type="audio/mp3">
     </audio>
+
+    <div class="popup">
+        <header>
+            <span style="color: #202020;">where you want to share?</span>
+            <div class="close"><i class="uil uil-times"></i></div>
+        </header>
+        <div class="content">
+            <p>Share this link via</p>
+            <ul class="icons">
+                <li class="social-share-url facebook"><a href="#" style="color: #202020; border-color:#b7d4fb"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="social-share-url twitter"><a href="#" style="color: #202020; border-color:#b6e7fc"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-share-url linkedin"><a href="#" style="color: #202020; border-color:#cdccff"><i class="fab fa-linkedin"></i></a></li>
+                <li class="social-share-url whatsapp"><a href="#" style="color: #202020; border-color:#bef4d2"><i class="fab fa-whatsapp"></i></a></li>
+                <li id="share-float-icon"><a href="#" style="color: #202020; border-color:#bdbdbd"><i class="fas fa-ellipsis-h"></i></a></li>
+            </ul>
+            <p>Or copy link</p>
+            <div class="field">
+                <i class="url-icon uil uil-link"></i>
+                <input type="text" readonly value="https://hellomukul.tk/">
+                <button>Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper-internet">
+        <div class="toast">
+            <div class="content-internet">
+                <div class="icon-internet"><i class="uil uil-wifi"></i></div>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="details-internet">
+                    <span>You're online now</span>
+                    <p>Your Internet is connected.</p>
+                </div>
+            </div>
+            <div class="close-icon"><i class="uil uil-times"></i></div>
+        </div>
+    </div>
 
     <!-- Nav Bar -->
     <div class="dsn-nav-bar">
@@ -201,7 +239,7 @@
                                     </div>
                                 </div>
                                 <div class="image-container">
-                                    <div class="image-bg cover-bg animate-bg" data-image-src="assets/img/bg2.jpg" data-overlay="4">
+                                    <div class="image-bg cover-bg animate-bg" data-image-src="assets/img/bg2.jpg" data-overlay="2">
                                         <img src="assets/img/bg2.jpg" alt="">
                                         <span class="shooting-star-1"></span>
                                         <span class="shooting-star-1"></span>
@@ -279,11 +317,11 @@
                                     <i class="fab fa-whatsapp " style="color: #fff; "></i>
                                 </a>
                             </li>
-                            <li id="web-share-btn">
+                            <!-- <li id="web-share-btn">
                                 <a href="# ">
                                     <i class="bx bx-dots-horizontal-rounded" style="color: #fff; "></i>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
 
@@ -819,6 +857,7 @@
     <script src="assets/js/dsn-grid.js "></script>
     <script src="assets/js/custom.js "></script>
     <script src="assets/js/share.js "></script>
+    <script src="assets/js/script-internet.js"></script>
     <script type="text/javascript " src="assets/js/vanilla-tilt.js "></script>
     <!--VanillaTilt script starts-->
     <script>
@@ -924,7 +963,37 @@
         document.querySelector('.sweet-alert-test').addEventListener('click', success);
 
         function success() {
-            swal(" XOXO ", "< do provide feedback />", "info");
+            swal(" XOXO ", "< do provide feedback />", "success");
+        }
+    </script>
+
+    <!--share button pop up menu-->
+    <script>
+        const viewBtn = document.querySelector(".view-modal"),
+            popup = document.querySelector(".popup"),
+            close = popup.querySelector(".close"),
+            field = popup.querySelector(".field"),
+            input = field.querySelector("input"),
+            copy = field.querySelector("button");
+
+        viewBtn.onclick = () => {
+            popup.classList.toggle("show");
+        }
+        close.onclick = () => {
+            viewBtn.click();
+        }
+
+        copy.onclick = () => {
+            input.select();
+            if (document.execCommand("copy")) {
+                field.classList.add("active");
+                copy.innerText = "Copied";
+                setTimeout(() => {
+                    window.getSelection().removeAllRanges();
+                    field.classList.remove("active");
+                    copy.innerText = "Copy";
+                }, 3000);
+            }
         }
     </script>
 

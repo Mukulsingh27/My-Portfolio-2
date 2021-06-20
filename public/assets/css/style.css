@@ -13249,6 +13249,9 @@ header .close:hover {
 
 .popup .icons {
     margin: 15px 0 20px 0;
+    color: #dbdbdb;
+    border-color: #e2e2e2;
+    filter: invert(1);
 }
 
 .content p {

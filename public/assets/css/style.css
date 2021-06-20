@@ -13361,11 +13361,11 @@ header .close:hover {
 
 .wrapper-internet .toast {
     background: #fff;
-    padding: 20px 15px 20px 20px;
+    padding: 13px 5px 13px 13px;
     border-radius: 10px;
-    border-left: 35px solid #2ecc71;
+    border-left: 14px solid #2ecc71;
     box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
-    width: 430px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13381,12 +13381,12 @@ header .close:hover {
 }
 
 .content-internet .icon-internet {
-    font-size: 25px;
+    font-size: 20px;
     color: #fff;
-    height: 50px;
+    height: 40px;
     width: 50px;
     text-align: center;
-    line-height: 50px;
+    line-height: 40px;
     border-radius: 50%;
     background: #2ecc71;
 }
@@ -13400,8 +13400,8 @@ header .close:hover {
 }
 
 .details-internet span {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 300;
 }
 
 .details-internet p {
@@ -13410,12 +13410,12 @@ header .close:hover {
 
 .toast .close-icon {
     color: #000000;
-    font-size: 23px;
+    font-size: 20px;
     cursor: pointer;
-    height: 40px;
+    height: 33px;
     width: 40px;
     text-align: center;
-    line-height: 40px;
+    line-height: 33px;
     border-radius: 50%;
     background: #f2f2f2;
     transition: all 0.3s ease;

@@ -3,7 +3,7 @@
 
 A complete responsive and attractive web application which takes input from user and sends them an email conatining a random xkcd in it.
 
-[![N|Mukul Singh](https://i.ibb.co/VN91CCL/rtcamp.png)](http://demo.techmihirnaik.in/)
+[![N|Mukul Singh](https://i.ibb.co/VN91CCL/rtcamp.png)](da)
 
 ## Technologies used:
 Entire project is purely created in:
@@ -34,6 +34,6 @@ Entire project is purely created in:
 **The entire code is created as per PHP coding standards and assignment submission guidelines**
 ```sh
 Demo Link : 
-http://demo.techmihirnaik.in/
+ds
 ```
 > Created by: `Mukul Singh`

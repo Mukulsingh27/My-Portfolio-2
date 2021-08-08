@@ -1,39 +1,50 @@
 # XKCD challenge
-### [Get a COMIC on email in every 5 minutes]
+#### [Get a COMIC on email every 5 minutes]
 
-A complete responsive and attractive web application which takes input from user and sends them an email conatining a random xkcd in it.
+A complete responsive, attractive and working web application that takes input from users and sends them an email every 5 minutes containing a random xkcd comic in it.
 
-[![N|Mukul Singh](https://i.ibb.co/VN91CCL/rtcamp.png)](da)
+[![N|Mukul Singh](https://i.ibb.co/VN91CCL/rtcamp.png)](http://demo.techmihirnaik.in/)
 
 ## Technologies used:
-Entire project is purely created in:
+The entire project is purely created in:
 
 - HTML
 - CSS
 - PHP
 - MYSQL
 
+## Description
+`Comics is a medium used to express ideas with images, often combined with text or other visual information.`
+
+This web application is designed in such a way as to provides an email every 5 minutes to its subscribers. It asks the user to first input their email-id, If the entered email is valid then a verification mail is sent automatically to their respective mail id.
+
+On successful verification, their email-id is registered in a database with a verified status from where all verified users will receive exclusive comics via mail with an attachment for download. This application also contains a feature to request for re-verification email if by chance any issue they haven't receive any mail at the time of registration.
+
+The mail that every user will receive also contains a unsubscribe button if in case they want a break from receiving regular email.
+It's a complete web application that is fully functioning and has been tested several times to avoid any inconvenience faced by users.
+
 ## Files with brief description:
 
-> **connection.php** : As per the name, this files contains the credentials and creates successful connection to the database.
+> **connection.php** : As per the name, this file contains the credentials and creates a successful connection to the database.
 
-> **index.php** : Landing page of the project, it conatins the attractive UI where everyone makes a visit. It contains a subscription form responsible for storing user's email-id for every mail functionality. 
+> **index.php** : The landing page of the project contains an attractive UI where everyone makes a visit. It contains a subscription form responsible for storing the user's email id for every mail functionality.  
 
-> **controller.php** : It conatins the important database operations with security methods (Injection, XCC and other vulnerabilities). It is also responsible for sending verification link via mail.
+> **controller.php** : It contains the important database operations with security methods (Injection, XSS and other vulnerabilities). It is also responsible for sending verification links via mail. 
 
-> **verify-email.php** : This file is mainly resposible for user's email-id verification via a button which user gets in email.
+> **verify-email.php** : This file is mainly responsible for the user's email-id verification via a button which user gets in the email.
 
-> **xkcd.php** : The mail file of the project , responsible of fetching comics details from xkcd and mails (inline with attachment) them to user's email-id everytime whenever a cron job is executed. Also send a unsubscribe link button in every email.
+> **xkcd.php** : The mail file of the project, responsible for fetching comics details from xkcd and mails  (inline with attachment) to the user's email-id every time whenever a cron job is executed. Also, send a unsubscribe link button in every email.
 
-> **unsubscribe.php** : This file allows user to get unsubscribed on their wish via a button that user's get in mail with comic attachments. On successful unsubscription user's data get deleted from database.
+> **unsubscribe.php** : This file allows users to get unsubscribed on their wish via a button that user's get in the mail with comic attachments. On successful unsubscription user's data get deleted from the database.
 
-> **resend.php** : It conatins another attractive UI with a form responsible for taking user input and allowing them to request cerification email again.
+> **resend.php** : It contains another attractive UI with a form responsible for taking user input and allowing them to request re-verification emails again.
 
-> **resend-code.php** : This file contains the functionality of resend.php UI that allows user to request verification email again if they haven't received it either due to server time out or any other reason.
+> **resend-code.php** : This file contains the functionality of resend.php UI that allows users to request a re-verification email again if they haven't received it either due to server time out or any other reason at the time of registration.
 
 **The entire code is created as per PHP coding standards and assignment submission guidelines**
 ```sh
 Demo Link : 
-ds
+http://demo.techmihirnaik.in/
+
 ```
 > Created by: `Mukul Singh`

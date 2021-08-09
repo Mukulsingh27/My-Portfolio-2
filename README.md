@@ -1,7 +1,7 @@
 # XKCD challenge
 #### [Get a COMIC on email every 5 minutes]
 
-A complete responsive, attractive and working web application that takes input from users and sends them an email every 5 minutes containing a random xkcd comic in it.
+A complete responsive, attractive and working web application that takes input from users and sends them an email every 5 minutes containing a random xkcd comic in it. Or users can just simply read any random comic online.
 
 [![N|Mukul Singh](https://i.ibb.co/VN91CCL/rtcamp.png)](http://demo.techmihirnaik.in/)
 
@@ -40,6 +40,8 @@ It's a complete web application that is fully functioning and has been tested se
 > **resend.php** : It contains another attractive UI with a form responsible for taking user input and allowing them to request re-verification emails again.
 
 > **resend-code.php** : This file contains the functionality of resend.php UI that allows users to request a re-verification email again if they haven't received it either due to server time out or any other reason at the time of registration.
+
+> **view.php** : This file provides the functionality of displaying a random comic every time from where users can view or read any comic online.
 
 **The entire code is created as per PHP coding standards and assignment submission guidelines**
 ```sh

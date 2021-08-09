@@ -3,7 +3,7 @@
 
 A complete responsive, attractive and working web application that takes input from users and sends them an email every 5 minutes containing a random xkcd comic in it. Or users can just simply read any random comic online.
 
-[![N|Mukul Singh](https://i.ibb.co/VN91CCL/rtcamp.png)](http://demo.techmihirnaik.in/)
+[![N|Mukul Singh](https://i.ibb.co/SQSdK5v/rtcamp.png)](http://demo.techmihirnaik.in/)
 
 ## Technologies used:
 The entire project is purely created in:

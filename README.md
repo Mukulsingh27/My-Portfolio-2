@@ -41,12 +41,12 @@ It's a complete web application that is fully functioning and has been tested se
 
 > **resend-code.php** : This file contains the functionality of resend.php UI that allows users to request a re-verification email again if they haven't received it either due to server time out or any other reason at the time of registration.
 
-> **view.php** : This file provides the functionality of displaying a random comic every time from where users can view or read any comic online.
+> **view.php** : This file provides the functionality of displaying a random comic every time from where users can view or read any comic online(http://demo.techmihirnaik.in/)
 
 **The entire code is created as per PHP coding standards and assignment submission guidelines**
 ```sh
 Demo Link : 
-http://demo.techmihirnaik.in/(http://demo.techmihirnaik.in/)
+http://demo.techmihirnaik.in/
 
 ```
 > Created by: `Mukul Singh`

@@ -46,7 +46,7 @@ It's a complete web application that is fully functioning and has been tested se
 **The entire code is created as per PHP coding standards and assignment submission guidelines**
 ```sh
 Demo Link : 
-http://demo.techmihirnaik.in/
+http://demo.techmihirnaik.in/(http://demo.techmihirnaik.in/)
 
 ```
 > Created by: `Mukul Singh`

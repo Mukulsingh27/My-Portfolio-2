@@ -21,7 +21,7 @@ This web application is designed in such a way as to provides an email every 5 m
 On successful verification, their email-id is registered in a database with a verified status from where all verified users will receive exclusive comics via mail with an attachment for download. This application also contains a feature to request for re-verification email if by chance any issue they haven't receive any mail at the time of registration.
 
 The mail that every user will receive also contains a unsubscribe button if in case they want a break from receiving regular email.
-It's a complete web application that is fully functioning and has been tested several times to avoid any inconvenience faced by users.
+It's a complete web application with neat/clean and easy to understand code that is fully functioning and has been tested several times to avoid any inconvenience faced by users.
 
 ## Files with brief description:
 
@@ -33,7 +33,7 @@ It's a complete web application that is fully functioning and has been tested se
 
 > **verify-email.php** : This file is mainly responsible for the user's email-id verification via a button which user gets in the email.
 
-> **xkcd.php** : The mail file of the project, responsible for fetching comics details from xkcd and mails  (inline with attachment) to the user's email-id every time whenever a cron job is executed. Also, send a unsubscribe link button in every email.
+> **xkcd.php** : The mail file of the project, responsible for fetching comics details from xkcd and mails  (inline with attachment) to the user's email-id every time whenever a cron job is executed. Also, send a unsubscribe link button in every email.( this file is stored in a non-public directory and cannot be accessed by anyone on server )
 
 > **unsubscribe.php** : This file allows users to get unsubscribed on their wish via a button that user's get in the mail with comic attachments. On successful unsubscription user's data get deleted from the database.
 
@@ -41,11 +41,11 @@ It's a complete web application that is fully functioning and has been tested se
 
 > **resend-code.php** : This file contains the functionality of resend.php UI that allows users to request a re-verification email again if they haven't received it either due to server time out or any other reason at the time of registration.
 
-> **view.php** : This file provides the functionality of displaying a random comic every time from where users can view or read any comic online(http://demo.techmihirnaik.in/)
+> **view.php** : This file provides the functionality of displaying a random comic every time from where users can view or read any comic online.
 
 **The entire code is created as per PHP coding standards and assignment submission guidelines**
-```sh
-Demo Link : 
+#### Demo Link :
+```sh 
 http://demo.techmihirnaik.in/
 
 ```

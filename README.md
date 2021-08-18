@@ -1,7 +1,7 @@
 # XKCD challenge
 #### [Get a COMIC on email every 5 minutes]
 
-A complete responsive, attractive and working web application that takes input from users and sends them an email every 5 minutes containing a random xkcd comic in it. Or users can just simply read any random comic online.
+A complete responsive, attractive, secured and working web application that takes input from users and sends them an email every 5 minutes containing a random xkcd comic in it. Or users can just simply read any random comic online.
 
 [![N|Mukul Singh](https://i.ibb.co/SQSdK5v/rtcamp.png)](http://demo.techmihirnaik.in/)
 
@@ -33,7 +33,7 @@ It's a complete web application with neat/clean and easy to understand code that
 
 > **verify-email.php** : This file is mainly responsible for the user's email-id verification via a button which user gets in the email.
 
-> **xkcd.php** : The mail file of the project, responsible for fetching comics details from xkcd and mails  (inline with attachment) to the user's email-id every time whenever a cron job is executed. Also, send a unsubscribe link button in every email.( this file is stored in a non-public directory and cannot be accessed by anyone on server )
+> **xkcd.php** : The mail file of the project, responsible for fetching comics details from xkcd and mails  (inline with attachment) to the user's email-id every time whenever a cron job is executed. Also, send a unsubscribe link button in every email.( this file is stored in a non-public directory and cannot be accessed by anyone on server and contains extra layer of security which prevent email script to run by brute-force approach).
 
 > **unsubscribe.php** : This file allows users to get unsubscribed on their wish via a button that user's get in the mail with comic attachments. On successful unsubscription user's data get deleted from the database.
 
